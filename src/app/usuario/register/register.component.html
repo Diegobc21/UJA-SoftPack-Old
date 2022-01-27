@@ -20,15 +20,20 @@
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" [(ngModel)]="usuario.email" class="form-control" id="email" name="email" placeholder="Introduce tu email" required #email="ngModel" minlength="5">
+                    <input type="email" ngModel email [(ngModel)]="usuario.email" class="form-control" id="email" name="email" placeholder="Introduce tu email" required #email="ngModel" minlength="5">
                 </div>
 
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
                     <div *ngIf="email.errors?.['required']">
                         Email requerido.
                     </div>
+
                     <div *ngIf="email.errors?.['minlength']">
                         El email debe tener al menos 5 caracteres.
+                    </div>
+
+                    <div *ngIf="!email.errors?.['required'] && !email.errors?.['minlength']">
+                        El email no es válido.
                     </div>
                 </div>
 
@@ -36,8 +41,7 @@
                     <label for="password">Contraseña (mínimo 4 caracteres)</label>
 
                     <div class="input-group col-lg-12 mb-4 border-md border-right-0 p-0">
-                        <input [type]="pass ? 'text' : 'password'" type="password" [(ngModel)]="usuario.password" class="form-control password" id="password" name="password" placeholder="Introduce tu contraseña" required minlength="4" appForbiddenName="1234" #password="ngModel"
-                            data-toggle="password">
+                        <input [type]="pass ? 'text' : 'password'" type="password" [(ngModel)]="usuario.password" class="form-control password" id="password" name="password" placeholder="Introduce tu contraseña" required minlength="4" #password="ngModel" data-toggle="password">
                         <div (click)="pass = !pass" type="button" class="input-group-append">
                             <div class="input-group-text">
                                 <div *ngIf="pass">
@@ -48,7 +52,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -58,9 +61,6 @@
                     </div>
                     <div *ngIf="password.errors?.['minlength']">
                         La contraseña debe tener al menos 4 caracteres.
-                    </div>
-                    <div *ngIf="password.errors?.['forbiddenName']">
-                        La contraseña no puede ser 1234.
                     </div>
                 </div>
 
@@ -78,5 +78,4 @@
             </div>
         </div>
     </div>
-
 </div>

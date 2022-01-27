@@ -3,8 +3,6 @@ import { ServiceService } from '../../service/service.service';
 import { Router } from '@angular/router';
 import { Usuario } from '../../model/usuario';
 
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -18,16 +16,27 @@ export class ListComponent implements OnInit {
 
   nombre: String;
 
+  page = 1;
+  pageSize = 5;
+  collectionSize: number;
+
   constructor(private service:ServiceService, private router:Router) {
-      
+
   }
 
   ngOnInit(): void {
     this.service.getUsuarios()
     .subscribe(data => {
       this.usuarios = data;
+      // this.collectionSize = this.usuarios.length;
     })
     this.nombre = "";
+    
+  }
+
+  actualizar() {
+      this.usuarios.map((u, i) => ({n: i + 1, ...u}))
+      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
 
   Editar(id: number){
@@ -42,7 +51,7 @@ export class ListComponent implements OnInit {
     })
   }
 
-  UsuarioActual(usuario: Usuario){
+  Confirmar(usuario: Usuario){
     this.nombre = usuario.nombre;
     this.seleccionado = usuario;
   }

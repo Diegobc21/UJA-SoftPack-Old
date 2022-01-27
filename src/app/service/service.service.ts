@@ -41,8 +41,6 @@ export class ServiceService {
     return this.http.get<Usuario>(this.UrlUsuario + '/' + id);
   }
 
-  
-
   cambiarNombre(id: number, usuario: Usuario){
     return this.http.put(this.UrlUsuario + '/' + id, usuario).subscribe();
   }

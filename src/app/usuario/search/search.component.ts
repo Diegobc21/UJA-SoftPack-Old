@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   id: number;
   nombre: string;
 
-  constructor(private router: Router, private service: ServiceService) { }
+  constructor( private router: Router, private service: ServiceService ) { }
 
   ngOnInit(): void {
   }

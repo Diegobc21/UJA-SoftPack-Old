@@ -3,5 +3,5 @@ export class Usuario {
     nombre: string;
     email: string;
     password: string;
-    activo: boolean;
+    online: boolean;
 }

@@ -1,70 +1,230 @@
 <div class="container px-4 py-5" id="hanging-icons">
-    <h2 class="pb-2 border-bottom">Hanging icons</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <h2 class="pb-2 border-bottom">Busca herramientas por categorías</h2>
+    <div class="container row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-            </div>
             <div>
-                <h2>Featured title</h2>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a type="button" class="btn btn-primary">
-            Primary button
-          </a>
+                <h2>IDE's</h2>
+                <p>Un entorno de desarrollo integrado (IDE) es un sistema de software para el diseño de aplicaciones que combina herramientas comunes para desarrolladores en una sola interfaz de usuario gráfica.</p>
+                <!-- <a type="button" class="btn btn-primary">Ver todo</a> -->
             </div>
         </div>
         <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
-            </div>
             <div>
-                <h2>Featured title</h2>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a type="button" class="btn btn-primary">
-            Primary button
-          </a>
+                <h2>Prototipado</h2>
+                <p>Un prototipo web consiste en un boceto, navegable o no, que permiten crear una referencia visual de la estructura de una página web, definiendo al detalle el contenido y su distribución visual, organizando así la información a nivel de
+                    página.
+                </p>
+                <!-- <a type="button" class="btn btn-primary">Ver todo</a> -->
             </div>
         </div>
         <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
-            </div>
             <div>
-                <h2>Featured title</h2>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a type="button" class="btn btn-primary">
-            Primary button
-          </a>
+                <h2>FrontEnd</h2>
+                <p>El frontend es la parte del desarrollo web que se dedica a la parte frontal de un sitio web, en pocas palabras del diseño de un sitio web, desde la estructura del sitio hasta los estilos como colores, fondos, tamaños hasta llegar a las
+                    animaciones y efectos.</p>
+                <!-- <a type="button" class="btn btn-primary">Ver todo</a> -->
             </div>
         </div>
     </div>
     <div>
         <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs pt-4">
             <div [ngbNavItem]="1">
-                <a ngbNavLink>One</a>
+                <a ngbNavLink>IDE</a>
                 <ng-template ngbNavContent>
-                    <p class="bg-white">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                        synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-                    </p>
+                    <main class="my-5">
+                        <div class="container bg-white">
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <section>
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Apache_NetBeans_Logo.svg" class="img-fluid icon" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>Apache Netbeans IDE</h5>
+                                                <p>
+                                                    NetBeans es un entorno de desarrollo integrado libre, hecho principalmente para el lenguaje de programación Java.
+                                                </p>
+                                                <!-- <button type="button" class="btn btn-info">Ver</button> -->
+                                            </div>
+                                        </div>
+                                        <!-- Post -->
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="http://www.bosung.info/img/icons/eclipse.png" class="img-fluid icon" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>Eclipse</h5>
+                                                <p>
+                                                    Eclipse es una plataforma de software compuesto por un conjunto de herramientas de programación de código abierto multiplataforma para desarrollar lo que el proyecto llama "Aplicaciones de Cliente Enriquecido", opuesto a las aplicaciones "Cliente-liviano"
+                                                    basadas en navegadores.
+                                                </p>
+                                                <!-- <button type="button" class="btn btn-info">Ver</button> -->
+                                            </div>
+                                        </div>
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="https://alternativas-a.com/wp-content/uploads/clion.png" class="img-fluid icon my-auto" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>JetBrains</h5>
+                                                <p>
+                                                    Herramientas esenciales para desarrolladores de software y equipos.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </main>
                 </ng-template>
             </div>
             <div [ngbNavItem]="2">
-                <a ngbNavLink>Two</a>
+                <a ngbNavLink>Prototipado</a>
                 <ng-template ngbNavContent>
-                    <p class="bg-white">Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
-                        PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard
-                        ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-                    </p>
+                    <main class="my-5">
+                        <div class="container bg-white">
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <section>
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="https://taiwebs.com/upload/icons/axure-rp-pro220-220.png" class="img-fluid icon" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>Axure RP</h5>
+                                                <p>
+                                                    Axure RP is the only UX tool that gives UX professionals the power to build realistic, functional prototypes.
+                                                </p>
+                                                <!-- <button type="button" class="btn btn-info">Ver</button> -->
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </main>
                 </ng-template>
             </div>
             <div [ngbNavItem]="3">
-                <a ngbNavLink>Three</a>
+                <a ngbNavLink>Diseño</a>
                 <ng-template ngbNavContent>
-                    <p class="bg-white">Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra
-                        et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod
-                        facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel
-                        tellus pulvinar feugiat.
-                    </p>
+                    <main class="my-5">
+                        <div class="container bg-white">
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <section>
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="https://www.sublimehq.com/images/sublime_text.png" class="img-fluid icon" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>Sublime Text</h5>
+                                                <p>
+                                                    The sophisticated text editor for code, markup and prose.
+                                                </p>
+                                                <!-- <button type="button" class="btn btn-info">Ver</button> -->
+                                            </div>
+                                        </div>
+                                        <!-- Post -->
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="https://media-exp1.licdn.com/dms/image/C510BAQFGjkYhPJ9ZKg/company-logo_200_200/0/1519896238068?e=2159024400&v=beta&t=-P48z2QJmj3dPK4_JUj6ZIp0Dy0Jh2Tr2yyL8u9nYUk" class="img-fluid icon" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>Visual Paradigm</h5>
+                                                <p>
+                                                    Visual Paradigm features a rich set of agile and scrum tools for project management.
+                                                </p>
+                                                <!-- <button type="button" class="btn btn-info">Ver</button> -->
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </main>
+                </ng-template>
+            </div>
+            <div [ngbNavItem]="4">
+                <a ngbNavLink>Otras</a>
+                <ng-template ngbNavContent>
+                    <main class="my-5">
+                        <div class="container bg-white">
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <section>
+                                        <div class="row py-4">
+                                            <div class="col-md-4 mb-4 text-center">
+                                                <div data-mdb-ripple-color="light">
+                                                    <img src="https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8" class="img-fluid icon" />
+                                                    <a href="#!">
+                                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8 my-auto">
+                                                <h5>Postman</h5>
+                                                <p>
+                                                    Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster..
+                                                </p>
+                                                <!-- <button type="button" class="btn btn-info">Ver</button> -->
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </main>
                 </ng-template>
             </div>
         </div>

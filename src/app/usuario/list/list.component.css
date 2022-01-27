@@ -11,12 +11,21 @@
     text-align: center;
 }
 
-.modal-body .btn-close {
+
+/* .modal-body .btn-close {
     width: 0px;
     padding: 0 0;
     margin: 0 0;
-}
+} */
 
 .check {
     fill: var(--success);
+}
+
+.btn-delete {
+    color: var(--danger);
+}
+
+.btn-edit {
+    color: var(--primary);
 }

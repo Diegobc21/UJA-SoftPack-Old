@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from '../../service/service.service';
 import { Usuario } from '../../model/usuario';
@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
   usuario: Usuario;
 
+
   constructor(private router: Router, private service: ServiceService) {
     this.pass = false;
     this.passwordConfirmation = "";
@@ -27,11 +28,21 @@ export class RegisterComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
+  validarEmail(email: string) {
+    const regularExpression = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regularExpression.test(String(email).toLowerCase());
+  }
+
   registrar(){
-    this.service.registrarUsuario(this.usuario)
-    .subscribe(result => {
-      this.verLista();
-    });
+
+    if (this.validarEmail(this.usuario.email)){
+      this.service.registrarUsuario(this.usuario)
+      .subscribe(result => {
+        this.verLista();
+      });
+    } else {
+      console.log("no es un email");
+    }
   }
 
   verLista() {
