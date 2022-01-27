@@ -36,7 +36,7 @@ export class EditComponent implements OnInit {
   }
 
   verLista() {
-    this.router.navigate(['settings/list']);
+    this.router.navigate(['admin/list']);
   }
 
 }

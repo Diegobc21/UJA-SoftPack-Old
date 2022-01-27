@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class SettingsComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
   
 
@@ -17,11 +17,11 @@ export class SettingsComponent implements OnInit {
   }
 
   list(){
-    this.router.navigate(['settings/list']);
+    this.router.navigate(['admin/list']);
   }
 
   search() {
-    this.router.navigate(['settings/search']);
+    this.router.navigate(['admin/search']);
   }
 
 }

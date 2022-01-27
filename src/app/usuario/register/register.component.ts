@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
 
   verLista() {
-    this.router.navigate(['settings/list']);
+    this.router.navigate(['admin/list']);
   }
 
 }

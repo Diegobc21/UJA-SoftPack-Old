@@ -6,7 +6,7 @@ import { SoftwareComponent } from './content/pages/software/software.component';
 import { ERROR404Component } from './content/pages/error404/error404.component';
 import { EditComponent } from './usuario/edit/edit.component';
 import { ListComponent } from './usuario/list/list.component';
-import { SettingsComponent } from './content/pages/settings/settings.component';
+import { AdminComponent } from './content/pages/admin/admin.component';
 import { SearchComponent } from './usuario/search/search.component';
 import { RegisterComponent } from './usuario/register/register.component';
 import { LoginComponent } from './usuario/login/login.component';
@@ -35,8 +35,8 @@ const routes: Routes = [
     component: ProfileComponent
   },
   {
-    path: 'settings',
-    component: SettingsComponent,
+    path: 'admin',
+    component: AdminComponent,
     children: [
       {
         path: 'search',
