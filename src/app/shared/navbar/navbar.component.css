@@ -14,18 +14,18 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #515151
+    color: #515151;
 }
 
 .tools-item:active,
 .tools-item:focus,
 .tools-item:hover {
     text-decoration: none;
-    color: #515151
+    color: #515151;
 }
 
 .tools-item i {
-    font-size: 20px
+    font-size: 20px;
 }
 
 .tools-item .tools-item-count {
@@ -50,7 +50,11 @@
     font-style: normal;
     font-size: 11px;
     background: #ff5a00;
-    color: #fff
+    color: #fff;
+}
+
+.tools-item .dropdown-item:focus {
+    color: #fff;
 }
 
 .tools {
@@ -58,15 +62,20 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
 }
 
 .tools a {
-    color: #515151
+    color: #515151;
 }
 
-.dropdown-item {
+
+/* .dropdown-item {
     color: #000;
+} */
+
+.dropdown-item {
+    color: #fff;
 }
 
 .dropdown-item:focus {
@@ -81,4 +90,9 @@
 .fa-user:hover {
     transition: .3s;
     color: #6a30c2;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 3rem;
 }

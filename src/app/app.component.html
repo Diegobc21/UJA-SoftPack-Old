@@ -2,11 +2,11 @@
     <app-loadspinner></app-loadspinner>
     <div class='dashboard'>
         <app-sidebar></app-sidebar>
+        <app-navbar></app-navbar>
         <div class='dashboard-app'>
-            <header>
-                <app-navbar></app-navbar>
-            </header>
-            <router-outlet></router-outlet>
+            <div class="vh-100 mb-4">
+                <router-outlet></router-outlet>
+            </div>
             <!-- <app-footer></app-footer> -->
         </div>
     </div>
