@@ -30,7 +30,7 @@ export class EditComponent implements OnInit {
   editar(nuevoNombre: string, nuevoEmail: string){ 
       this.usuario.nombre = nuevoNombre;
       this.usuario.email = nuevoEmail;
-      this.service.cambiarNombre(this.id, this.usuario);
+      this.service.editar(this.id, this.usuario);
 
       this.verLista();
   }

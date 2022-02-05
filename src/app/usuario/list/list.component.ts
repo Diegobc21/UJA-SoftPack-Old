@@ -14,11 +14,13 @@ export class ListComponent implements OnInit {
 
   seleccionado: Usuario;
 
-  nombre: String;
+  nombre: string;
+  nuevoNombre: string;
+  nuevoEmail: string;
 
-  page = 1;
-  pageSize = 5;
-  collectionSize: number;
+  // page = 1;
+  // pageSize = 5;
+  // collectionSize: number;
 
   constructor(private service:ServiceService, private router:Router) {
 
@@ -28,21 +30,20 @@ export class ListComponent implements OnInit {
     this.service.getUsuarios()
     .subscribe(data => {
       this.usuarios = data;
-      // this.collectionSize = this.usuarios.length;
+      //  this.collectionSize = this.usuarios.length;
     })
-    this.nombre = "";
+    // this.nombre = "";
+    this.seleccionado = new Usuario();
     
   }
 
-  actualizar() {
-      this.usuarios.map((u, i) => ({n: i + 1, ...u}))
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
+  editar(nuevoNombre: string, nuevoEmail: string){ 
+    this.seleccionado.nombre = nuevoNombre;
+    this.seleccionado.email = nuevoEmail;
+    this.service.editar(this.seleccionado.id, this.seleccionado);
 
-  Editar(id: number){
-    localStorage.setItem("id", id.toString());
-    this.router.navigate(["edit"]);
-  }
+    this.router.navigate(['admin/list']);
+}
 
   Borrar(usuario:Usuario){
     this.service.borrarUsuario(usuario)
@@ -51,9 +52,20 @@ export class ListComponent implements OnInit {
     })
   }
 
-  Confirmar(usuario: Usuario){
+  select(usuario: Usuario){
     this.nombre = usuario.nombre;
     this.seleccionado = usuario;
   }
+
+  
+  // actualizar() {
+  //     this.usuarios.map((u, i) => ({n: i + 1, ...u}))
+  //     .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  // }
+
+  // Editar(id: number){
+  //   localStorage.setItem("id", id.toString());
+  //   this.router.navigate(["edit"]);
+  // }
 
 }
