@@ -52,7 +52,7 @@ const routes: Routes = [
     path: 'edit',
     component: EditComponent
   },
-  { // ERROR 404    
+  {
     path: '**',
     component: ERROR404Component
   }

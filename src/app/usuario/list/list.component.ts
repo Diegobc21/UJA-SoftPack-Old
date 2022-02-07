@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../service/service.service';
+import { UsuarioService } from 'src/app/core/service/usuario.service';
 import { Router } from '@angular/router';
-import { Usuario } from '../../model/usuario';
+import { Usuario } from '../../core/model/usuario';
 
 @Component({
   selector: 'app-list',
@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
   // pageSize = 5;
   // collectionSize: number;
 
-  constructor(private service:ServiceService, private router:Router) {
+  constructor(private service: UsuarioService, private router:Router) {
 
   }
 

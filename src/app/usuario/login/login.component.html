@@ -53,3 +53,21 @@
         </div>
     </div>
 </div>
+
+<!-- <form name="form" #loginForm="ngForm" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+    <div [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+        <label for="username">Nombre</label>
+        <input type="text" name="username" [(ngModel)]="usuario.nombre" #username="ngModel" required />
+        <div *ngIf="f.submitted
+          && !username.valid">Nombre requerido</div>
+    </div>
+    <div [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="usuario.password" #password="ngModel" required />
+        <div *ngIf="f.submitted
+          && !password.valid">Contraseña requerida</div>
+    </div>
+    <div>
+        <button [disabled]="!loginForm.form.valid">Login</button>
+    </div>
+</form> -->

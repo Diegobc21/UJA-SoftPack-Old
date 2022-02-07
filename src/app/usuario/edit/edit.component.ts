@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../../model/usuario';
+import { Usuario } from '../../core/model/usuario';
 import { Router } from '@angular/router';
-import { ServiceService } from '../../service/service.service';
+import { UsuarioService } from 'src/app/core/service/usuario.service';
 
 @Component({
   selector: 'app-edit',
@@ -17,7 +17,7 @@ export class EditComponent implements OnInit {
 
   id: number;
 
-  constructor(private router:Router, private service:ServiceService) { }
+  constructor(private router: Router, private service: UsuarioService) { }
 
   ngOnInit(): void {    
     this.id = Number(localStorage.getItem("id"));

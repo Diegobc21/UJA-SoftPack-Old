@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceService } from '../../service/service.service';
-import { Usuario } from '../../model/usuario';
+import { UsuarioService } from 'src/app/core/service/usuario.service';
+import { Usuario } from '../../core/model/usuario';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   usuario: Usuario;
 
 
-  constructor(private router: Router, private service: ServiceService) {
+  constructor(private router: Router, private service: UsuarioService) {
     this.pass = false;
     this.passwordConfirmation = "";
     this.usuario = new Usuario();

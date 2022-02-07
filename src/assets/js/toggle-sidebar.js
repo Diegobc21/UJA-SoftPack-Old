@@ -16,13 +16,6 @@ $(document).ready(function() {
             $(".dashboard").toggleClass("dashboard-compact");
         }
     });
-    $(".menu-toggle-custom").click(function() {
-        if (mobileScreen.matches) {
-            $(".dashboard-nav").toggleClass("mobile-show");
-        } else {
-            $(".dashboard").toggleClass("dashboard-compact");
-        }
-    });
     $(".close-menu").click(function() {
         if (mobileScreen.matches) {
             $(".dashboard-nav").toggleClass("mobile-show");

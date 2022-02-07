@@ -10,8 +10,6 @@ import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { SearchComponent } from './search/search.component';
 
-
-
 @NgModule({
   declarations: [
     ProfileComponent,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceService } from '../../service/service.service';
-import { Usuario } from '../../model/usuario';
+import { UsuarioService } from '../../core/service/usuario.service';
+import { Usuario } from '../../core/model/usuario';
 
 @Component({
   selector: 'app-search',
@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   id: number;
   nombre: string;
 
-  constructor( private router: Router, private service: ServiceService ) { }
+  constructor( private router: Router, private service: UsuarioService ) { }
 
   ngOnInit(): void {
   }

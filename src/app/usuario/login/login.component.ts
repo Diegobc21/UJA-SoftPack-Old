@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../service/service.service';
+import { UsuarioService } from 'src/app/core/service/usuario.service';
 import { Router } from '@angular/router';
-import { Usuario } from '../../model/usuario';
+import { Usuario } from '../../core/model/usuario';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   usuario: Usuario;
 
-  constructor(private router: Router, private service: ServiceService) {
+  constructor(private router: Router, private service: UsuarioService) {
     this.usuario = new Usuario();
    }
 
@@ -25,9 +25,8 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.usuario);
-    // this.service.login(usuario).subscribe( data => {
-    //   console.log(data);
-    // });
+
+    this.router.navigate(['']);
   }
 
 }

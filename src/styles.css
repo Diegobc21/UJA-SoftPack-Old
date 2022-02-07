@@ -54,6 +54,17 @@ p {
     z-index: 2;
 }
 
+.spinner-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 74, 74, .8);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* IMPORTANTE - ARREGLA EL BUG DE PANTALLA COMPLETAMENTE OSCURA */
 

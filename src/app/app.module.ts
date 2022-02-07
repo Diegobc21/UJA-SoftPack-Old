@@ -9,14 +9,14 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { ContentModule } from './content/content.module';
-import { ServiceService } from './service/service.service';
+import { UsuarioService } from './core/service/usuario.service';
 import { UsuarioModule } from './usuario/usuario.module';
-import { LoadspinnerInterceptor } from './shared/interceptors/loadspinner.interceptor';
-
+import { LoadspinnerInterceptor } from './core/interceptors/loadspinner.interceptor';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     AppRoutingModule,
@@ -27,12 +27,12 @@ import { LoadspinnerInterceptor } from './shared/interceptors/loadspinner.interc
     NgbModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoreModule
   ],
   providers: [
-    ServiceService,
+    UsuarioService,
     { provide: HTTP_INTERCEPTORS, useClass: LoadspinnerInterceptor, multi: true }
-  
   ],
   bootstrap: [AppComponent]
 })

@@ -1,22 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../model/usuario';
+import { HttpClient  } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Usuario } from 'src/app/core/model/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService {
+export class UsuarioService {
 
-  constructor(private http:HttpClient) { }
-
-  Url: string = 'http://localhost:8080/ujasoftpack';
-
-  UrlUsuario: string = this.Url + '/usuarios';
-
-  login(usuario: any): Observable<any> {    
-    return this.http.post(this.UrlUsuario, usuario);
+  constructor( private http:HttpClient ) {
   }
+
+  UrlUsuario: string = 'http://localhost:8080/ujasoftpack/usuarios';
+
 
   registrarUsuario(usuario: Usuario){
     return this.http.post<Usuario>(this.UrlUsuario, usuario);
