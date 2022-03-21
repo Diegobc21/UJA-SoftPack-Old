@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoadspinnerComponent } from '../shared/loadspinner/loadspinner.component';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
