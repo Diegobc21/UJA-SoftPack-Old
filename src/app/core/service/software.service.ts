@@ -10,7 +10,7 @@ export class SoftwareService {
 
   constructor(private http: HttpClient) { }
 
-  url: string = "http://localhost:3000";
+  url: string = "https://usp-server.herokuapp.com";
 
   getSoftware(): Observable<Software[]>{
     return this.http.get<Software[]>(this.url + "/software");
@@ -18,6 +18,5 @@ export class SoftwareService {
 
   find(id: string):Observable<Software>{
       return this.http.get<Software>(this.url + "/software/" + id);
-    
   }
 }

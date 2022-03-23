@@ -65,6 +65,32 @@ p {
     justify-content: center;
 }
 
+.code-editor {
+    min-height: 430px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100vw;
+}
+
+@media (min-width:768px) {
+    .code-editor {
+        width: 800px;
+    }
+}
+
+@media (min-width:768px) {
+    .code-editor {
+        width: 800px;
+    }
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 /* IMPORTANTE - ARREGLA EL BUG DE PANTALLA COMPLETAMENTE OSCURA */
 

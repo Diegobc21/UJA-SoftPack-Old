@@ -6,6 +6,7 @@ export interface Software {
     id:         number;
     name:        string;
     description: string;
+    category:    string;
     os:          Os[];
     resources?:  Resources[];
 }

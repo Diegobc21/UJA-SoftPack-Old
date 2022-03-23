@@ -8,9 +8,7 @@ import { AppComponent } from './app.component';
 import { ContentModule } from './content/content.module';
 import { CoreModule } from './core/core.module';
 import { LoadspinnerInterceptor } from './core/interceptors/loadspinner.interceptor';
-import { UsuarioService } from './core/service/usuario.service';
 import { SharedModule } from './shared/shared.module';
-import { UsuarioModule } from './usuario/usuario.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +19,6 @@ import { UsuarioModule } from './usuario/usuario.module';
     ContentModule,
     BrowserModule,
     SharedModule,
-    UsuarioModule,
     NgbModule,
     FormsModule,
     HttpClientModule,
@@ -29,7 +26,6 @@ import { UsuarioModule } from './usuario/usuario.module';
     CoreModule
   ],
   providers: [
-    UsuarioService,
     { provide: HTTP_INTERCEPTORS, useClass: LoadspinnerInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

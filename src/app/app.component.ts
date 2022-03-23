@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { UsuarioService } from './core/service/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +8,8 @@ import { UsuarioService } from './core/service/usuario.service';
 
 export class AppComponent {
   title:string;
-  constructor(private http: HttpClient, private service: UsuarioService){
+  
+  constructor(){
     this.title = 'UJA-SoftPack';
   }
   

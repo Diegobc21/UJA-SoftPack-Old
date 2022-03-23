@@ -83,16 +83,16 @@
     color: #fff;
 }
 
-.fa-user {
-    color: #8A3FFC;
-}
-
-.fa-user:hover {
-    transition: .3s;
-    color: #6a30c2;
-}
-
 .logo {
     max-width: 100%;
     max-height: 3rem;
+}
+
+.icon {
+    color: #8A3FFC;
+}
+
+.icon:hover {
+    transition: .3s;
+    color: #6a30c2;
 }
